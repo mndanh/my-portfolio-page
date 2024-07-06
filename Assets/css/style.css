@@ -1,0 +1,251 @@
+/* developers name, a recent photo, and links to sections: about them, their work, contact */
+/* when clicking on on of the link, the UI scrolls to the corresponding section */
+/* the first application image should be larger */
+/* when clicking on the application, take the user to the deployed application */
+/* sizing should fit various screen sizes */
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background-color: gray;
+  }
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom:10px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    background-color: darkblue;
+    color: white;
+}
+
+header h1 {
+    color: peachpuff;
+}
+
+
+nav {
+    display: flex;
+    background-color: peachpuff;
+    font-weight: bold;
+  }
+
+nav a {
+    color: darkblue;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+nav a:hover {
+    background-color: white;
+    color: darkblue;
+  }
+
+main {
+    width: 96%;
+    margin: 2rem auto;
+    align-items: center;
+}
+
+main img {
+    border: 3px solid peachpuff;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* margin-left: -1.5rem;
+    margin-right: -1.5rem; */
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+}
+
+
+.about-me {
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: darkblue;
+    color: white;
+    border: 3px solid peachpuff;
+}
+
+.about-me h2 {
+    color: peachpuff;
+}
+
+.am-body img {
+    align-items: center;
+}
+
+.seo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    flex-grow: 1;
+    text-align: center;
+    color: darkblue;
+    text-decoration: underline;
+    text-decoration-color: peachpuff;
+}
+
+.seo a img {
+    height: 80%;
+    width: 70%;
+}
+
+.seo a:hover {
+    filter: drop-shadow(40px 40px 80px rgba(36, 36, 36, 0.5));
+}
+
+
+.other-jobs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+    width: 80%;
+    padding: 1.5rem;
+}
+
+.row.justify-center h1 {
+    color: darkblue;
+    text-decoration: underline;
+    text-decoration-color: peachpuff;
+}
+
+.all-items.row.justify-center {
+    padding: 1.5rem;
+    margin-bottom: 8rem;
+    align-items: center;
+}
+
+.content {
+    /* border-style: solid;
+    border-width: 1px;
+    border-radius: var(--border-radius); */
+    flex: 0 0 300px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.content > h2 {
+    color: darkblue;
+    text-decoration: underline;
+    text-decoration-color: peachpuff;
+}
+    
+.content > a img {
+    height: 100%;
+    width: 100%;
+}
+
+.other-jobs .content a :hover {
+    filter: drop-shadow(10px 10px 20px rgba(36, 36, 36, 0.5));
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    align-items: center;
+    border: 3px solid peachpuff;
+    background-color: darkblue;
+    color: peachpuff;
+}
+
+.contact-me p {
+    display: inline-flex;
+    justify-content: flex-end;
+    padding: 2rem;
+    color: white;
+}
+
+
+@media screen and (max-width:768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seo {
+        width: 100%;
+        flex-grow: 6;
+        text-align: center;
+    }
+
+    .seo a img {
+        width: 95%;
+        height: 95%;
+    }
+
+    .other-jobs.content h2 a img {
+        display: flex;
+        height: auto;
+        /* width: 50%;
+        flex-basis: 30%; 
+        take a look at this*/
+    }
+
+    .other-jobs.content h2 {
+        height: auto;
+        width: 100%;
+    }
+
+    .other-jobs a {
+        width: 50%;
+        height: 50%;
+    }
+
+    .other-jobs {
+        width: 50%;
+        height: auto;
+        flex-grow: 3;
+    }
+
+    .contact-me {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .all-items.row.justify-center {
+        margin-bottom: 3rem;
+        align-items: center;
+    }
+}
