@@ -248,4 +248,28 @@ main img {
         margin-bottom: 3rem;
         align-items: center;
     }
+
+    body {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .forecastContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center space-between;
+    }
+
+    .forecast-card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 16px;
+        margin: 8px;
+        text-align: center;
+        box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+        flex: 1 1 calc(20% - 16px); /* Adjust width as needed */
+        max-width: calc(20% - 16px); /* Adjust width as needed */
+        background-color: rgb(9, 9, 61);
+        color: white;
+    }
 }
